@@ -26,13 +26,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // connect routers
 const indexRouter = require("./routes/index");
-// require artist router
+const artistRouter = require("./routes/artist")
+const labelRouter = require("./routes/label")
+const styleRouter = require("./routes/style")
 // require label router here
 // require style router here
 
 // use routers
 app.use("/", indexRouter); // use routers
-// use artist router here
+app.use("/artist", artistRouter);
+app.use("/label", labelRouter);
+app.use("/style", styleRouter);
 // use label router here
 // use style router here
 
