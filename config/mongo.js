@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect("mongodb://localhost/artistify", {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true

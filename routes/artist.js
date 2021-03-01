@@ -6,9 +6,12 @@ const uploader = require("./../config/cloudinary")
 // VIEW OF THE ARTISTS
 router.get("/", (req, res, next) => {
     ArtistModel.find()
-    
-        .then((artist) => {
-            res.render("dashboard/artists", {artist})
+        .then((dbSuccess) => {
+            console.log(dbSuccess);
+            let data = {
+                artist : dbSuccess
+            }
+            res.render("dashboard/artists", data)
         })
         .catch(next)
 })
