@@ -6,6 +6,7 @@ const uploader = require("./../config/cloudinary")
 // VIEW OF THE ARTISTS
 router.get("/", (req, res, next) => {
     ArtistModel.find()
+    
         .then((artist) => {
             res.render("dashboard/artists", {artist})
         })
@@ -54,11 +55,11 @@ router.post('/update/:id', async (req, res, next) => {
 });
 
 // DELETE ARTIST
-router.get('/drones/:id/delete', async (req, res, next) => {
-    try{
-      await ArtistModel.findByIdAndDelete(req.params.id);
-    }
-    catch (error){next(error)}
-  });
+// router.get('/:id', async (req, res, next) => {
+//     try{
+//       await ArtistModel.findByIdAndDelete(req.params.id);
+//     }
+//     catch (error){next(error)}
+//   });
   
 module.exports = router;

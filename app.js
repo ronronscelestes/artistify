@@ -35,11 +35,8 @@ const styleRouter = require("./routes/style")
 // use routers
 app.use("/", indexRouter); // use routers
 app.use("/dashboard/artist", artistRouter);
-app.use("/dashboard/label", labelRouter);
-app.use("/dashboard/style", styleRouter);
-// use label router here
-// use style router here
-
+app.use("/dashboard/label", labelRouter); // use label router here
+// app.use("/dashboard/style", styleRouter); // use style router here
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
