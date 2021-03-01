@@ -34,9 +34,9 @@ const styleRouter = require("./routes/style")
 
 // use routers
 app.use("/", indexRouter); // use routers
-app.use("/artist", artistRouter);
-app.use("/label", labelRouter);
-app.use("/style", styleRouter);
+app.use("/dashboard/artist", artistRouter);
+app.use("/dashboard/label", labelRouter);
+app.use("/dashboard/style", styleRouter);
 // use label router here
 // use style router here
 
